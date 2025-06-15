@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Harish's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Sri Harish</div>
+        <ul class="nav-links">
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#education">EDUCATION</a></li>
+            <li><a href="#skills">SKILLS</a></li>
+            <li><a href="#project">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+        <a href="#" class="scroll-up"><i class="fas fa-chevron-up"></i></a>
+        <div class="social-icons-left">
+            <a href="https://linkedin.com/in/sri-harish-k-06s11s/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/cyber._.captain_/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Sriharish11" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <div class="main-home-content-area">
+            <div class="intro-right-text">
+                <p class="hello-text">👋 Hi i am</p>
+                <h1 class="name-text">SRI HARISH K</h1>
+                <div class="typewriter-container">
+                    <span id="text"></span>
+                    <span class="cursor">|</span>
+                </div>
+            </div>
+            <div class="profile-image-container">
+                <img src="assets/hari.jpeg" alt="Profile Image" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2><span class="highlight-underline">A</span>bout</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Motivated and hands-on B.E. Cybersecurity student with strong practical skills in ethical hacking, Capture The Flag (CTF) challenges, digital forensics, and embedded security. Known for crafting creative CTF flags and solving complex security challenges. Proficient in Python programming, security tool development, and microcontroller-based projects. Has conducted research and development work within a cyber community created by Our Mahendra College cybersecurity students. Demonstrates clear communication and teamwork through workshops, events, and public speaking. Passionate about building secure, innovative solutions for real-world cyber threats.</p>
+            </div>
+            <div class="about-image-container">
+                <img src="assets/harish.jpg" alt="About Image" class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <h2><span class="highlight-underline">E</span>ducation</h2>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="icon-placeholder"><i class="fas fa-graduation-cap"></i></div>
+                <h3>Mahendra Engineering College, Namakkal</h3>
+                <p>B.E. Cyber Security</p>
+                <p>2022 - 2026</p>
+            </div>
+            <div class="education-card">
+                <div class="icon-placeholder"><i class="fas fa-school"></i></div>
+                <h3>Holy Cross Matric Higher Secondary School</h3>
+                <p>HSC in Biology</p>
+                <p>2020 - 2022</p>
+            </div>
+            <div class="education-card">
+                <div class="icon-placeholder"><i class="fas fa-laptop-code"></i></div>
+                <h3>Cybersecurity Intern – Cyfotok Infosec</h3>
+                <p>Aug 2024 – Sep 2024</p>
+            </div>
+            <div class="education-card">
+                <div class="icon-placeholder"><i class="fas fa-gavel"></i></div>
+                <h3>Digital Forensics Intern – Cyber Crime Police Station, Puducherry</h3>
+                <p>Jan 2025 – Feb 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2><span class="highlight-underline">S</span>kills</h2>
+        <div class="skills-filters">
+            <button class="skill-filter active" data-filter="all">All</button>
+            <button class="skill-filter" data-filter="programming">Programming Languages</button>
+            <button class="skill-filter" data-filter="cybersecurity">Cybersecurity Tools</button>
+            <button class="skill-filter" data-filter="os">Operating Systems</button>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card" data-category="programming">
+                <img src="assets/Python.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="skill-card" data-category="programming">
+                <img src="assets/HTML.png" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="skill-card" data-category="programming">
+                <img src="assets/CSS.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="skill-card" data-category="cybersecurity">
+                <img src="assets/nmap.png" alt="Nmap">
+                <p>Nmap</p>
+            </div>
+            <div class="skill-card" data-category="cybersecurity">
+                <img src="assets/Wireshark.png" alt="Wireshark">
+                <p>Wireshark</p>
+            </div>
+            <div class="skill-card" data-category="cybersecurity">
+                <img src="assets/Metasploit.png" alt="Metasploit">
+                <p>Metasploit</p>
+            </div>
+            <div class="skill-card" data-category="cybersecurity">
+                <img src="assets/Burp-suite.png" alt="Burpsuite">
+                <p>Burpsuite</p>
+            </div>
+            <div class="skill-card" data-category="os">
+                <img src="assets/Linux.png" alt="Linux">
+                <p>Linux</p>
+            </div>
+            <div class="skill-card" data-category="os">
+                <img src="assets/Windows.png" alt="Windows">
+                <p>Windows</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project" class="project-section">
+        <h2><span class="highlight-underline">P</span>rojects</h2>
+        <div class="projects-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <strong>Text to Emoji Encryption & Decryption using RSA</strong>
+                            <p>Published in IJMRSET, Volume 8, Issue 5. A secure emoji-based communication system using RSA encryption and blockchain for stealthy message transmission.</p>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img-container">
+                            <img src="assets/rsa.png" alt="RESTful Blog Management API">
+                        </div>
+                        <div class="front-content">
+                            <small class="badge">Encryption</small>
+                            <div class="description">
+                                <div class="title">
+                                    <p><strong>Text to Emoji Encryption</strong></p>
+                                </div>
+                                <p class="card-text">RSA + Blockchain | IJMRSET, Vol 8</p>
+                            </div>
+                            <div class="card-actions">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <strong>WiFi Deauther (ESP32)</strong>
+                            <p>A tool that simulates deauthentication attacks on WiFi networks for testing purposes. Features a web-based interface for real-time control and monitoring.</p>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img-container">
+                            <img src="assets/WiFi_Deauther.jpg" alt="Nxt Watch">
+                        </div>
+                        <div class="front-content">
+                            <small class="badge">Networking</small>
+                            <div class="description">
+                                <div class="title">
+                                    <p><strong>WiFi Deauther (ESP32)</strong></p>
+                                </div>
+                                <p class="card-text">Web interface | Attack testing</p>
+                            </div>
+                            <div class="card-actions">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <strong>USB Rubber Ducky (Raspberry Pi Pico)</strong>
+                            <p>Programmed automated keystroke injection scripts for pentesting via USB emulation. Simulates physical access attack payloads for security testing.</p>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img-container">
+                            <img src="assets/USB Rubber Ducky.jpg" alt="Jobby app">
+                        </div>
+                        <div class="front-content">
+                            <small class="badge">Security</small>
+                            <div class="description">
+                                <div class="title">
+                                    <p><strong>USB Rubber Ducky</strong></p>
+                                </div>
+                                <p class="card-text">RPi Pico | Keystroke injection</p>
+                            </div>
+                            <div class="card-actions">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="content">
+                    <div class="back">
+                        <div class="back-content">
+                            <strong>Mini Server (ESP32 + SD Card)</strong>
+                            <p>Built a basic web-based file server using ESP32 to handle file uploads/downloads over Wi-Fi. Includes user authentication and secure access control.</p>
+                        </div>
+                    </div>
+                    <div class="front">
+                        <div class="img-container">
+                            <img src="assets/Mini Server.png" alt="Match App">
+                        </div>
+                        <div class="front-content">
+                            <small class="badge">Embedded</small>
+                            <div class="description">
+                                <div class="title">
+                                    <p><strong>Mini Server (ESP32)</strong></p>
+                                </div>
+                                <p class="card-text">File mgmt | Auth system</p>
+                            </div>
+                            <div class="card-actions">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Enter message"></textarea>
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="send-btn">Send</button>
+                    <a href="https://drive.google.com/file/d/1w_fOZURGvHMyrB7Id9SBIaPdMixRzCSr/view?usp=drive_link" target="_blank" class="resume-btn">Resume</a>
+                </div>
+            </form>
+            <div class="contact-image-social">
+                <img src="assets/haris.jpeg" alt="Contact Image" class="contact-image">
+                <div class="social-links-bottom">
+                    <a href="https://linkedin.com/in/sri-harish-k-06s11s/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/cyber._.captain_/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Sriharish11" target="_blank"><i class="fab fa-github"></i></a>
+                    <button class="scroll-up"><i class="fas fa-chevron-up"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html> 
