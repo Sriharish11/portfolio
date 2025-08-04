@@ -310,7 +310,7 @@ document.getElementById("feedback-form").addEventListener("submit", function (e)
             formStatus.textContent = "✅ Thank you! Feedback sent.";
             form.reset();
             setTimeout(() => {
-                window.location.href = "https://www.linkedin.com/in/YOUR_LINKEDIN_PROFILE/";
+                window.location.href = "https://www.linkedin.com/in/sri-harish-k-06s11s/";
             }, 1500);
         })
         .catch((error) => {
@@ -342,22 +342,6 @@ function showSuccess(message) {
     }, 8000);
 }
 
-// Get the feedback form element
-const scriptURL = 'https://script.google.com/macros/s/AKfycby3LlTLy-XA45bLUoPSDEBhed57GxXeiHxTKEuNXwVpqzGqwuwj_J484kLYe2VvEKWu/exec';
-  const form = document.getElementById('feedback-form');
-
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    fetch(scriptURL, {
-      method: 'POST',
-      body: new FormData(form)
-    })
-    .then(response => {
-      alert("Thank you! Your feedback has been sent.");
-      window.location.href = "https://www.linkedin.com/in/sri-harish-k-06s11s/";
-    })
-    .catch(error => console.error('Error!', error.message));
-  });
 
 // Handle form submission with improved UX
 if (feedbackForm) {
