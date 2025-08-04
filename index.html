@@ -3,294 +3,532 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Harish's Portfolio</title>
+    <title>Sri Harish K | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Meta tags for better SEO and sharing -->
+    <meta name="description" content="Sri Harish K - Cybersecurity Professional Portfolio">
+    <meta name="keywords" content="cybersecurity, portfolio, hacking, security, cyber captain">
+    <meta name="author" content="Sri Harish K">
+    <!-- Favicon -->
+    <link rel="icon" href="cyber-skull-logo.png" type="image/png">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">Sri Harish</div>
-        <ul class="nav-links">
-            <li><a href="#home">HOME</a></li>
-            <li><a href="#about">ABOUT</a></li>
-            <li><a href="#education">EDUCATION</a></li>
-            <li><a href="#skills">SKILLS</a></li>
-            <li><a href="#project">PROJECTS</a></li>
-            <li><a href="#contact">CONTACT</a></li>
-        </ul>
-    </nav>
-
-    <!-- Home Section -->
-    <section id="home" class="home-section">
-        <a href="#" class="scroll-up"><i class="fas fa-chevron-up"></i></a>
-        <div class="social-icons-left">
-            <a href="https://linkedin.com/in/sri-harish-k-06s11s/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/cyber._.captain_/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/Sriharish11" target="_blank"><i class="fab fa-github"></i></a>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="terminal-title">terminal</div>
+            </div>
+            <div class="terminal-content">
+                <div class="line">$ <span class="typing-text">initializing system...</span></div>
+                <div class="line">$ <span class="typing-text">loading modules...</span></div>
+                <div class="line">$ <span class="typing-text">establishing secure connection...</span></div>
+                <div class="line">$ <span class="typing-text">decrypting portfolio data...</span></div>
+                <div class="line">$ <span class="typing-text">access granted. welcome to my portfolio.</span></div>
+            </div>
         </div>
-        <div class="main-home-content-area">
-            <div class="intro-right-text">
-                <p class="hello-text">👋 Hi i am</p>
-                <h1 class="name-text">SRI HARISH K</h1>
-                <div class="typewriter-container">
-                    <span id="text"></span>
-                    <span class="cursor">|</span>
+    </div>
+
+    <!-- Matrix Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- Header & Navigation -->
+    <header role="banner">
+        <div class="logo">
+            <img src="cyber-skull-logo.png" alt="Cyber Captain Logo - Sri Harish K Portfolio">
+        </div>
+        <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="#home" aria-label="Go to Home section">Home</a></li>
+                <li><a href="#about" aria-label="Go to About section">About</a></li>
+                <li><a href="#skills" aria-label="Go to Skills section">Skills</a></li>
+                <li><a href="#internships" aria-label="Go to Internships section">Internships</a></li>
+                <li><a href="#projects" aria-label="Go to Projects section">Projects</a></li>
+                <li><a href="#volunteering" aria-label="Go to Volunteering section">Volunteering</a></li>
+                <li><a href="#services" aria-label="Go to Services section">Services</a></li>
+                <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+                <li class="mobile-social">
+                    <a href="https://linkedin.com/in/sri-harish-k-06s11s" target="_blank" aria-label="Visit LinkedIn profile (opens in new tab)"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://github.com/Sriharish11" target="_blank" aria-label="Visit GitHub profile (opens in new tab)"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="mailto:sriharishkiruba@gmail.com" aria-label="Send email to Sri Harish K"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+           
+            <button class="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" role="main">
+        <div id="particles" aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="hari.jpeg" alt="Sri Harish K - Profile Photo" class="profile-image">
+            </div>
+            <div class="hero-text">
+                <h1 class="glitch" data-text="Sri Harish K">Sri Harish K</h1>
+                <div class="typewriter" aria-label="Dynamic text animation">
+                    <span class="static-text">I</span>
+                    <span class="dynamic-text" id="dynamic-text" aria-live="polite"></span>
+                    <span class="cursor" aria-hidden="true">|</span>
+                </div>
+                <p class="subtitle">Penetration Tester | Ethical Hacker | CTF Player</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary" aria-label="Navigate to contact section">Get In Touch</a>
+                    <a href="#projects" class="btn secondary" aria-label="Navigate to projects section">View Projects</a>
                 </div>
             </div>
-            <div class="profile-image-container">
-                <img src="assets/hari.jpeg" alt="Profile Image" class="profile-image">
-            </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about-section">
-        <h2><span class="highlight-underline">A</span>bout</h2>
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2 class="glitch" data-text="About Me">About Me</h2>
+            <div class="section-line"></div>
+        </div>
         <div class="about-content">
             <div class="about-text">
-                <p>Motivated and hands-on B.E. Cybersecurity student with strong practical skills in ethical hacking, Capture The Flag (CTF) challenges, digital forensics, and embedded security. Known for crafting creative CTF flags and solving complex security challenges. Proficient in Python programming, security tool development, and microcontroller-based projects. Has conducted research and development work within a cyber community created by Our Mahendra College cybersecurity students. Demonstrates clear communication and teamwork through workshops, events, and public speaking. Passionate about building secure, innovative solutions for real-world cyber threats.</p>
+                <p>I'm a passionate Cybersecurity student with a focus on ethical hacking, penetration testing, and digital forensics. My journey in the cybersecurity realm began with a curiosity about how systems work and how they can be secured against malicious actors.</p>
+                <p>Currently pursuing my Bachelor's in Engineering with a specialization in Cybersecurity, I've developed a strong foundation in various security tools and methodologies. I enjoy participating in CTF competitions, researching vulnerabilities, and developing security tools.</p>
+                <p>My goal is to contribute to a safer digital world by identifying and mitigating security threats before they can be exploited.</p>
+                <div class="stats-container">
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">Internships</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">CTFs</span>
+                    </div>
+                </div>
             </div>
-            <div class="about-image-container">
-                <img src="assets/harish.jpg" alt="About Image" class="about-image">
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-        <h2><span class="highlight-underline">E</span>ducation</h2>
-        <div class="education-grid">
-            <div class="education-card">
-                <div class="icon-placeholder"><i class="fas fa-graduation-cap"></i></div>
-                <h3>Mahendra Engineering College, Namakkal</h3>
-                <p>B.E. Cyber Security</p>
-                <p>2022 - 2026</p>
-            </div>
-            <div class="education-card">
-                <div class="icon-placeholder"><i class="fas fa-school"></i></div>
-                <h3>Holy Cross Matric Higher Secondary School</h3>
-                <p>HSC in Biology</p>
-                <p>2020 - 2022</p>
-            </div>
-            <div class="education-card">
-                <div class="icon-placeholder"><i class="fas fa-laptop-code"></i></div>
-                <h3>Cybersecurity Intern – Cyfotok Infosec</h3>
-                <p>Aug 2024 – Sep 2024</p>
-            </div>
-            <div class="education-card">
-                <div class="icon-placeholder"><i class="fas fa-gavel"></i></div>
-                <h3>Digital Forensics Intern – Cyber Crime Police Station, Puducherry</h3>
-                <p>Jan 2025 – Feb 2025</p>
+            <div class="terminal-card">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="terminal-title">whoami</div>
+                </div>
+                <div class="terminal-content">
+                    <div class="line">$ whoami</div>
+                    <div class="line">sri_harish_k</div>
+                    <div class="line">$ cat /etc/profile</div>
+                    <div class="line">NAME: Sri Harish K</div>
+                    <div class="line">ROLE: Cybersecurity Student</div>
+                    <div class="line">LOCATION: India</div>
+                    <div class="line">INTERESTS: ["Ethical Hacking", "CTF", "Digital Forensics"]</div>
+                    <div class="line">$ _</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <h2><span class="highlight-underline">S</span>kills</h2>
-        <div class="skills-filters">
-            <button class="skill-filter active" data-filter="all">All</button>
-            <button class="skill-filter" data-filter="programming">Programming Languages</button>
-            <button class="skill-filter" data-filter="cybersecurity">Cybersecurity Tools</button>
-            <button class="skill-filter" data-filter="os">Operating Systems</button>
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <h2 class="glitch" data-text="Skills">Skills</h2>
+            <div class="section-line"></div>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card" data-category="programming">
-                <img src="assets/Python.png" alt="Python">
-                <p>Python</p>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Cybersecurity Tools</h3>
+                <div class="skill-items">
+                    <div class="skill-item">Burp Suite</div>
+                    <div class="skill-item">Wireshark</div>
+                    <div class="skill-item">Nmap</div>
+                    <div class="skill-item">Metasploit</div>
+                    <div class="skill-item">Kali Linux</div>
+                    <div class="skill-item">OWASP ZAP</div>
+                </div>
             </div>
-            <div class="skill-card" data-category="programming">
-                <img src="assets/HTML.png" alt="HTML">
-                <p>HTML</p>
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-items">
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">Java</div>
+                    <div class="skill-item">Bash</div>
+                    <div class="skill-item">HTML</div>
+                    <div class="skill-item">CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                </div>
             </div>
-            <div class="skill-card" data-category="programming">
-                <img src="assets/CSS.png" alt="CSS">
-                <p>CSS</p>
+            <div class="skill-category">
+                <h3>Cryptography</h3>
+                <div class="skill-items">
+                    <div class="skill-item">AES</div>
+                    <div class="skill-item">RSA</div>
+                    <div class="skill-item">SHA-256</div>
+                    <div class="skill-item">MD5</div>
+                    <div class="skill-item">SSL/TLS</div>
+                </div>
             </div>
-            <div class="skill-card" data-category="cybersecurity">
-                <img src="assets/nmap.png" alt="Nmap">
-                <p>Nmap</p>
+            <div class="skill-category">
+                <h3>Operating Systems</h3>
+                <div class="skill-items">
+                    <div class="skill-item">Linux</div>
+                    <div class="skill-item">Windows</div>
+                    <div class="skill-item">Ubuntu</div>
+                    <div class="skill-item">Kali Linux</div>
+                    <div class="skill-item">Parrot OS</div>
+                </div>
             </div>
-            <div class="skill-card" data-category="cybersecurity">
-                <img src="assets/Wireshark.png" alt="Wireshark">
-                <p>Wireshark</p>
-            </div>
-            <div class="skill-card" data-category="cybersecurity">
-                <img src="assets/Metasploit.png" alt="Metasploit">
-                <p>Metasploit</p>
-            </div>
-            <div class="skill-card" data-category="cybersecurity">
-                <img src="assets/Burp-suite.png" alt="Burpsuite">
-                <p>Burpsuite</p>
-            </div>
-            <div class="skill-card" data-category="os">
-                <img src="assets/Linux.png" alt="Linux">
-                <p>Linux</p>
-            </div>
-            <div class="skill-card" data-category="os">
-                <img src="assets/Windows.png" alt="Windows">
-                <p>Windows</p>
+            <div class="skill-category">
+                <h3>Focus Areas</h3>
+                <div class="skill-items">
+                    <div class="skill-item">Penetration Testing</div>
+                    <div class="skill-item">Ethical Hacking</div>
+                    <div class="skill-item">Digital Forensics</div>
+                    <div class="skill-item">Network Security</div>
+                    <div class="skill-item">Web Security</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Section -->
-    <section id="project" class="project-section">
-        <h2><span class="highlight-underline">P</span>rojects</h2>
+    <!-- Internships Section -->
+    <section id="internships" class="internships">
+        <div class="section-header">
+            <h2 class="glitch" data-text="Internships">Internships</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Ethical Hacking Intern</h3>
+                    <h4>Cyfotok Infosec</h4>
+                    <p class="timeline-date">June 2023 - August 2023</p>
+                    <p>Conducted vulnerability assessments and penetration testing on web applications. Identified and documented security vulnerabilities, and provided remediation recommendations. Participated in security awareness training sessions.</p>
+                    <div class="tags">
+                        <span>Web Security</span>
+                        <span>Penetration Testing</span>
+                        <span>Vulnerability Assessment</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Digital Forensics Intern</h3>
+                    <h4>Cyber Crime Police Station</h4>
+                    <p class="timeline-date">December 2022 - February 2023</p>
+                    <p>Assisted in digital evidence collection and analysis. Learned about chain of custody procedures and legal aspects of digital forensics. Participated in case studies involving cybercrime investigations.</p>
+                    <div class="tags">
+                        <span>Digital Forensics</span>
+                        <span>Evidence Analysis</span>
+                        <span>Cybercrime Investigation</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Research & Development Intern</h3>
+                    <h4>APJ Hacker India</h4>
+                    <p class="timeline-date">May 2022 - July 2022</p>
+                    <p>Researched emerging cybersecurity threats and developed proof-of-concept tools. Contributed to the development of security training materials. Participated in team projects focused on IoT security.</p>
+                    <div class="tags">
+                        <span>Research</span>
+                        <span>Tool Development</span>
+                        <span>IoT Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2 class="glitch" data-text="Projects">Projects</h2>
+            <div class="section-line"></div>
+        </div>
         <div class="projects-container">
-            <!-- Card 1 -->
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <strong>Text to Emoji Encryption & Decryption using RSA</strong>
-                            <p>Published in IJMRSET, Volume 8, Issue 5. A secure emoji-based communication system using RSA encryption and blockchain for stealthy message transmission.</p>
-                        </div>
-                    </div>
-                    <div class="front">
-                        <div class="img-container">
-                            <img src="assets/rsa.png" alt="RESTful Blog Management API">
-                        </div>
-                        <div class="front-content">
-                            <small class="badge">Encryption</small>
-                            <div class="description">
-                                <div class="title">
-                                    <p><strong>Text to Emoji Encryption</strong></p>
-                                </div>
-                                <p class="card-text">RSA + Blockchain | IJMRSET, Vol 8</p>
-                            </div>
-                            <div class="card-actions">
-                               
-                            </div>
-                        </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Text to Emoji Encryption using RSA</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/Sriharish11/Text-to-Emoji-Encryption-using-RSA.git" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Sriharish11/Text-to-Emoji-Encryption-using-RSA.git" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <strong>WiFi Deauther (ESP32)</strong>
-                            <p>A tool that simulates deauthentication attacks on WiFi networks for testing purposes. Features a web-based interface for real-time control and monitoring.</p>
-                        </div>
-                    </div>
-                    <div class="front">
-                        <div class="img-container">
-                            <img src="assets/WiFi_Deauther.jpg" alt="Nxt Watch">
-                        </div>
-                        <div class="front-content">
-                            <small class="badge">Networking</small>
-                            <div class="description">
-                                <div class="title">
-                                    <p><strong>WiFi Deauther (ESP32)</strong></p>
-                                </div>
-                                <p class="card-text">Web interface | Attack testing</p>
-                            </div>
-                            <div class="card-actions">
-                                
-                            </div>
-                        </div>
-                    </div>
+                <p>A unique encryption tool that converts sensitive text into seemingly innocent emoji sequences using RSA encryption algorithm, providing an additional layer of security through obfuscation.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Cryptography</span>
+                    <span>RSA</span>
                 </div>
             </div>
-
-            <!-- Card 3 -->
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <strong>USB Rubber Ducky (Raspberry Pi Pico)</strong>
-                            <p>Programmed automated keystroke injection scripts for pentesting via USB emulation. Simulates physical access attack payloads for security testing.</p>
-                        </div>
-                    </div>
-                    <div class="front">
-                        <div class="img-container">
-                            <img src="assets/USB Rubber Ducky.jpg" alt="Jobby app">
-                        </div>
-                        <div class="front-content">
-                            <small class="badge">Security</small>
-                            <div class="description">
-                                <div class="title">
-                                    <p><strong>USB Rubber Ducky</strong></p>
-                                </div>
-                                <p class="card-text">RPi Pico | Keystroke injection</p>
-                            </div>
-                            <div class="card-actions">
-                                
-                            </div>
-                        </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>WiFi Deauther (ESP32)</h3>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
+                <p>A portable device built on ESP32 that can perform WiFi deauthentication attacks for security testing purposes. Demonstrates the vulnerabilities in WiFi networks and the importance of using secure protocols.</p>
+                <div class="project-tags">
+                    <span>ESP32</span>
+                    <span>C++</span>
+                    <span>WiFi Security</span>
+                </div>
             </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>AI-Powered Phishing Detection Tool</h3>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p>A machine learning-based tool that analyzes URLs, email content, and website characteristics to identify potential phishing attempts with high accuracy, helping users avoid falling victim to phishing attacks.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Machine Learning</span>
+                    <span>Web Security</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>USB Rubber Ducky Emulator</h3>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p>A software emulator that mimics the functionality of a USB Rubber Ducky, allowing for testing of keystroke injection attacks in a controlled environment to demonstrate the risks of untrusted USB devices.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Hardware Security</span>
+                    <span>Penetration Testing</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>URL Redirect Detector</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/Sriharish11/URL-Redirect-Detector.git" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Sriharish11/URL-Redirect-Detector.git" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p>A tool that traces URL redirects and identifies potential malicious redirections, helping users understand where links actually lead before clicking them, reducing the risk of being directed to malicious websites.</p>
+                <div class="project-tags">
+                    <span>JavaScript</span>
+                    <span>Web Security</span>
+                    <span>Browser Extension</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>JARVIS Lite Voice Assistant</h3>
+                    <div class="project-links">
+                        <a href="https://github.com/Sriharish11/JARVIS-Lite-Voice-Assistant.git" class="project-link"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/Sriharish11/JARVIS-Lite-Voice-Assistant.git" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <p>A voice-controlled assistant with a focus on cybersecurity features, including password generation, security news updates, and basic system security checks, all accessible through voice commands.</p>
+                <div class="project-tags">
+                    <span>Python</span>
+                    <span>Speech Recognition</span>
+                    <span>AI</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Card 4 -->
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <strong>Mini Server (ESP32 + SD Card)</strong>
-                            <p>Built a basic web-based file server using ESP32 to handle file uploads/downloads over Wi-Fi. Includes user authentication and secure access control.</p>
-                        </div>
-                    </div>
-                    <div class="front">
-                        <div class="img-container">
-                            <img src="assets/Mini Server.png" alt="Match App">
-                        </div>
-                        <div class="front-content">
-                            <small class="badge">Embedded</small>
-                            <div class="description">
-                                <div class="title">
-                                    <p><strong>Mini Server (ESP32)</strong></p>
-                                </div>
-                                <p class="card-text">File mgmt | Auth system</p>
-                            </div>
-                            <div class="card-actions">
-                                
-                            </div>
-                        </div>
-                    </div>
+    <!-- Volunteering Section -->
+    <section id="volunteering" class="volunteering">
+        <div class="section-header">
+            <h2 class="glitch" data-text="Volunteering">Volunteering</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="volunteering-container">
+            <div class="volunteering-card">
+                <div class="volunteering-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="volunteering-content">
+                    <h3>Student Coordinator</h3>
+                    <h4>AI in Cybersecurity Workshop</h4>
+                    <p>Coordinated a workshop on the applications of artificial intelligence in cybersecurity, managing logistics, participant registration, and assisting with hands-on sessions.</p>
+                </div>
+            </div>
+            <div class="volunteering-card">
+                <div class="volunteering-icon">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="volunteering-content">
+                    <h3>Speaker</h3>
+                    <h4>Visual Vortex Video Editing Workshop</h4>
+                    <p>Delivered a session on video editing techniques and tools, focusing on creating engaging technical content for cybersecurity awareness and education.</p>
+                </div>
+            </div>
+            <div class="volunteering-card">
+                <div class="volunteering-icon">
+                    <i class="fas fa-flag"></i>
+                </div>
+                <div class="volunteering-content">
+                    <h3>Organizer</h3>
+                    <h4>CTF: WHO AM I Competition</h4>
+                    <p>Organized a Capture The Flag competition focused on identity and authentication challenges, designing puzzles, managing the competition platform, and providing support to participants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2 class="glitch" data-text="Services">Services</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Security Assessments</h3>
+                    <p>Comprehensive security audits and vulnerability assessments to identify weaknesses in your systems and applications.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bug"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Penetration Testing</h3>
+                    <p>Ethical hacking services to simulate real-world attacks and test your defenses against potential threats.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Secure Code Review</h3>
+                    <p>Detailed analysis of application code to identify security flaws and implement best practices for secure development.</p>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Security Training</h3>
+                    <p>Customized cybersecurity awareness training for teams and organizations to build a security-conscious culture.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <h2>Get In Touch</h2>
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2 class="glitch" data-text="Contact">Contact</h2>
+            <div class="section-line"></div>
+        </div>
         <div class="contact-container">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter name">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>Feel free to reach out for collaborations, questions, or just to say hello!</p>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>sriharishkiruba@gmail.com</span>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter email">
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>linkedin.com/in/sri-harish-k-06s11s</span>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Enter message"></textarea>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span>cybersentinel-ctf.netlify.app</span>
                 </div>
-                <div class="form-buttons">
-                    <button type="submit" class="send-btn">Send</button>
-                    <a href="https://drive.google.com/file/d/1w_fOZURGvHMyrB7Id9SBIaPdMixRzCSr/view?usp=drive_link" target="_blank" class="resume-btn">Resume</a>
+                <div class="social-links" role="list" aria-label="Social media links">
+                    <a href="https://github.com/Sriharish11" class="social-link" target="_blank" aria-label="Visit GitHub profile (opens in new tab)" role="listitem"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/cyber._.captain_/" class="social-link" target="_blank" aria-label="Visit Instagram profile (opens in new tab)" role="listitem"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/sri-harish-k-06s11s/" class="social-link" target="_blank" aria-label="Visit LinkedIn profile (opens in new tab)" role="listitem"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
                 </div>
-            </form>
-            <div class="contact-image-social">
-                <img src="assets/haris.jpeg" alt="Contact Image" class="contact-image">
-                <div class="social-links-bottom">
-                    <a href="https://linkedin.com/in/sri-harish-k-06s11s/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/cyber._.captain_/" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/Sriharish11" target="_blank"><i class="fab fa-github"></i></a>
-                    <button class="scroll-up"><i class="fas fa-chevron-up"></i></button>
-                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Feedback</h3>
+<form id="feedback-form" action="https://script.google.com/macros/s/AKfycbztPawaI8u72zmpkZF1pOhA33aM_H12tW0nVMg1DVLiUTOuNfw3zBUl-029_KiWJJim/exec" method="POST" autocomplete="off">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" required>
+  </div>
+  <div class="form-group">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+  </div>
+  <button type="submit" id="submit-btn" class="btn primary">
+    <span class="btn-text">Submit Feedback</span>
+    <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+  </button>
+  <div id="form-status" class="form-status"></div>
+</form>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="cyber-skull-logo.png" alt="Cyber Captain Logo">
+                <span class="logo-text">CYBER CAPTAIN</span>
+            </div>
+            <div class="terminal-footer">
+                <div class="terminal-header">SYSTEM >> INITIALIZED [2025] <<</div>
+                <div class="terminal-status">_STATUS: Online & Secure_</div>
+                <div class="terminal-trace">_TRACE: Sri Harish K. // All Rights Reserved._</div>
+                
+                <div class="terminal-connect">
+                    // Connect & Collaborate<br>
+                    // <a href="https://linkedin.com/in/sri-harish-k-06s11s" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn: linkedin.com/in/sri-harish-k-06s11s</a><br>
+                    // <a href="mailto:sriharishkiruba@gmail.com"><i class="fas fa-envelope"></i> Email: sriharishkiruba@gmail.com</a><br>
+                    // <a href="https://github.com/Sriharish11" target="_blank"><i class="fab fa-github"></i> GitHub: github.com/Sriharish11</a><br>
+                    // <a href="https://cybersentinel-ctf.netlify.app" target="_blank"><i class="fas fa-flag"></i> CTF: cybersentinel-ctf.netlify.app</a>
+                </div>
+                
+                <div class="terminal-prompt">> Built for the cybersecurity community with a passion for innovation.</div>
+            </div>
+        </div>
+    </footer>
+
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
