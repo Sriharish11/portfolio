@@ -297,9 +297,27 @@ style.innerHTML = particleStyles;
 document.head.appendChild(style);
 
 // ===== FEEDBACK FORM =====
-// Form status element
-const formStatus = document.getElementById('form-status');
+document.getElementById("feedback-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target;
+    const formStatus = document.getElementById("form-status");
 
+    fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+    })
+        .then((response) => {
+            formStatus.textContent = "✅ Thank you! Feedback sent.";
+            form.reset();
+            setTimeout(() => {
+                window.location.href = "https://www.linkedin.com/in/YOUR_LINKEDIN_PROFILE/";
+            }, 1500);
+        })
+        .catch((error) => {
+            formStatus.textContent = "❌ Something went wrong. Try again later.";
+            console.error(error);
+        });
+});
 // Show error message
 function showError(message) {
     formStatus.innerHTML = message;
