@@ -325,7 +325,21 @@ function showSuccess(message) {
 }
 
 // Get the feedback form element
-const feedbackForm = document.getElementById('feedback-form');
+const scriptURL = 'https://script.google.com/macros/s/AKfycby3LlTLy-XA45bLUoPSDEBhed57GxXeiHxTKEuNXwVpqzGqwuwj_J484kLYe2VvEKWu/exec';
+  const form = document.getElementById('feedback-form');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    fetch(scriptURL, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => {
+      alert("Thank you! Your feedback has been sent.");
+      window.location.href = "https://www.linkedin.com/in/sri-harish-k-06s11s/";
+    })
+    .catch(error => console.error('Error!', error.message));
+  });
 
 // Handle form submission with improved UX
 if (feedbackForm) {
