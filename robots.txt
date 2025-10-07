@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+# Hint: flag stored here
+Disallow: /do-not-share/flag.html
+
