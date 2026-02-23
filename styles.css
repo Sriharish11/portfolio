@@ -1122,6 +1122,16 @@ header.scrolled {
     gap: 10px;
 }
 
+#resume-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 /* ===== FORM STATUS MESSAGES ===== */
 .form-status {
     padding: 12px 15px;
@@ -1176,8 +1186,7 @@ header.scrolled {
     transform: translateY(-2px);
 }
 
-/* Submit button styling */
-#submit-btn {
+#submit-btn, #resume-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1187,9 +1196,31 @@ header.scrolled {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+    background-color: var(--primary-color);
+    color: var(--background);
+    border: none;
+    font-family: var(--font-main);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-btn {
+    margin-top: 20px;
+}
+
+#resume-btn {
+    margin-top: 15px;
 }
 
 #submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2);
+}
+
+#resume-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2);
 }
@@ -1200,12 +1231,27 @@ header.scrolled {
     transition: all 0.3s ease;
 }
 
+#resume-btn .btn-icon {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
 #submit-btn:hover .btn-icon {
     opacity: 1;
     transform: translateX(0);
 }
 
+#resume-btn:hover .btn-icon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 #submit-btn:hover .btn-text {
+    transform: translateX(-5px);
+}
+
+#resume-btn:hover .btn-text {
     transform: translateX(-5px);
 }
 
