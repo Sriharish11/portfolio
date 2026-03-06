@@ -717,6 +717,14 @@ header.scrolled {
     color: var(--text-color);
 }
 
+.company-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 12px;
+    display: inline-block;
+    filter: none;
+}
+
 .timeline-date {
     font-size: 0.9rem;
     color: var(--text-secondary);
